@@ -101,10 +101,10 @@ body {
     right: 0;
   }
 
-/*
+
 @media screen and (max-width: 1024px) {
   .m-signature-pad {
-    top: 0;
+    top: 110%;
     left: 0;
     right: 0;
     bottom: 0;
@@ -143,4 +143,4 @@ body {
       font-size: 1em;
       margin-top: 1em;
     }
-}*/
+
