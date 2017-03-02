@@ -1,8 +1,6 @@
 <?php
 require('fpdf.php');
 
-ini_set('display_errors', 1);
-
 class PDF extends FPDF
 {
 // Page header
@@ -165,9 +163,14 @@ function Body(){
 	$this->SetXY(9, 95);	
 	$this->Cell(192, 7, "Report and Findings", 1, 0, "L");
 
+	$this->Write(7, $_POST["report"]);
+
 	//Second Section
 	$this->SetXY(9, 140);	
 	$this->Cell(192, 7, "Actions & Recommendations", 1, 0, "L");
+
+	$this->Write(7, $_POST["actions"]);
+
 
 	//Bottom Panel
 	//Product Name
@@ -175,35 +178,72 @@ function Body(){
 	$this->Cell(46, 30, "", 1, 0, "L");
 	$this->Text(10, 204, "Product Name");
 
+	$this->Text(10, 211, "Mouse Trap");
+	$this->Text(10, 217, "Bait Box");
+	$this->Text(10, 223, "Poison");
+	$this->Text(10, 229, "Trap");
+
 	//Quantity
 	$this->SetXY(55, 200);	
 	$this->Cell(13, 30, "", 1, 0, "L");
 	$this->Text(56, 204, "Qty");
+
+	$this->Text(60, 211, 1);
+	$this->Text(60, 217, 9);
+	$this->Text(60, 223, 5);
+	$this->Text(60, 229, 3);
+
 
 	//Active
 	$this->SetXY(68, 200);	
 	$this->Cell(33, 30, "", 1, 0, "L");
 	$this->Text(69, 204, "Active Ingredients");
 
+	$this->Text(69, 211, "something");
+	$this->Text(69, 217, "something");
+	$this->Text(69, 223, "something");
+	$this->Text(69, 229, "something");
+
+
 	//Spraying
 	$this->SetXY(101, 200);	
 	$this->Cell(25, 30, "", 1, 0, "L");
 	$this->Text(102, 204, "Spraying");
+
+	$this->Text(112, 211, "X");
+	$this->Text(112, 217, "X");
+	$this->Text(112, 223, "X");
+	$this->Text(112, 229, "X");
 
 	//Dusting
 	$this->SetXY(126, 200);	
 	$this->Cell(25, 30, "", 1, 0, "L");
 	$this->Text(127, 204, "Dusting");
 
+	$this->Text(137, 211, "X");
+	$this->Text(137, 217, "X");
+	$this->Text(137, 223, "X");
+	$this->Text(137, 229, "X");
+
 	//Baiting
 	$this->SetXY(151, 200);	
 	$this->Cell(25, 30, "", 1, 0, "L");
 	$this->Text(152, 204, "Baiting");
 
+	$this->Text(162, 211, "X");
+	$this->Text(162, 217, "X");
+	$this->Text(162, 223, "X");
+	$this->Text(162, 229, "X");
+
 	//Other
 	$this->SetXY(176, 200);	
 	$this->Cell(25, 30, "", 1, 0, "L");
 	$this->Text(177, 204, "Other");
+
+	$this->Text(187, 211, "X");
+	$this->Text(187, 217, "X");
+	$this->Text(187, 223, "X");
+	$this->Text(187, 229, "X");
 
 	//Table Lines
 	$this->Line(9,206,201,206);
@@ -224,7 +264,7 @@ function Body(){
 	$this->Text(106, 234, "Client Name:");
 
 	$this->SetXY(105, 230);	
-	$this->Image("image.png",35, 224,65);
+	$this->Image("image.png", 40, 231,40);
 
 	//Technician
 	$this->SetXY(9, 250);	
