@@ -101,12 +101,7 @@ body {
     right: 0;
   }
 
-#myForm{
-
-  padding-top: 100%;
-
-}
-
+/*
 @media screen and (max-width: 1024px) {
   .m-signature-pad {
     top: 0;
@@ -148,4 +143,4 @@ body {
       font-size: 1em;
       margin-top: 1em;
     }
-}
+}*/
